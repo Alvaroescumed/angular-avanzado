@@ -1,0 +1,23 @@
+<p>table works!</p>
+<table>
+   <thead [ngClass]= "{'altered': isAltered}">
+        <tr>
+            <th *ngIf="!isAltered">ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>HP</th>
+            <th>Attack</th>
+            <th>Defense</th>
+        </tr>
+   </thead>
+   <tbody>
+        <tr *ngFor="let pokemon of pokemonInfo">
+            <td>{{pokemon.id}}</td>
+            <td>{{pokemon.name.english}}</td>
+            <td>{{pokemon.type}}</td>
+            <td>{{pokemon.base.HP}}</td>
+            <td>{{pokemon.base.Attack}}</td>
+            <td>{{pokemon.base.Defense}}</td>
+        </tr>
+   </tbody>
+</table>
