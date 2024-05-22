@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  styleUrls: ['./table.component.css']
 })
 export class TableComponent {
 
@@ -20,6 +20,9 @@ export class TableComponent {
     this.http.get<any[]>(url).subscribe((res) => {
       this.pokemonInfo = res.slice(0, 151);
     })
+  }
+  changeTable(){
+    this.isAltered = !this.isAltered
   }
 }
 
