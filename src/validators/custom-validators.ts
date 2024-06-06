@@ -13,3 +13,14 @@ export function birthDateValidator(control: AbstractControl): ValidationErrors |
     }
     return null
 }
+
+export function phoneValidator(control: AbstractControl): ValidationErrors | null {
+    
+    const phone = control.value;
+
+    if (phone.length >= 9 && phone.length <= 10) {
+        return null;
+    }
+
+    return { phoneInvalid: true };
+}
