@@ -1,7 +1,6 @@
-/* Estilos generales */
-body {
+
+* {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
   margin: 0;
   padding: 20px;
   justify-content: center;
@@ -9,17 +8,16 @@ body {
 
 h1 {
   text-align: center;
-  color: #2a75bb; /* Color azul Pokémon */
+  color: #2a75bb; 
 }
 
-/* Estilos para el botón */
 button {
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #ffcb05; /* Color amarillo Pokémon */
+  background-color: #ffcb05;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -30,7 +28,6 @@ button:hover {
   background-color: #e0a800;
 }
 
-/* Estilos para la tabla */
 table {
   width: 60%;
   border-collapse: collapse;

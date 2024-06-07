@@ -9,8 +9,10 @@ import { birthDateValidator, phoneValidator } from 'src/validators/custom-valida
 })
 export class FormComponent implements OnInit {
 
+  // Creamos el FormGrouop
   profileForm!: FormGroup;
 
+  // Inicializamos el formulario de registro con los validadores que queremos
   ngOnInit(): void {
     this.profileForm = new FormGroup({
       name: new FormControl('', Validators.required),
@@ -29,6 +31,7 @@ export class FormComponent implements OnInit {
     });
   }
 
+  // Creamos la función para que en el caso de que todos los campos sean correctos se complete el registro
   onSubmit() {
     if (this.profileForm.valid) {
       // Procesar los datos del formulario

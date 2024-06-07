@@ -1,6 +1,8 @@
 <h1>Estadisticas Pokémons de Kanto</h1>
 <button (click)="changeTable()">Change Table View</button>
 <table>
+
+    <!-- Cremos la tabla con los head usanfo ngIf para cuando el usuario quiera modificar la tabla -->
    <thead [ngClass]= "{'altered': isAltered}">
         <tr>
             <th>ID</th>
@@ -14,6 +16,7 @@
         </tr>
    </thead>
    <tbody>
+    <!-- llamamos a los datos de cada Pokemon mapeando el objeto de la API y al igual que antes usamos ngIf para cuando se modifique la tabla -->
         <tr *ngFor="let pokemon of pokemonInfo">
             <td>{{pokemon.id}}</td>
             <td>{{pokemon.name.english}}</td>
